@@ -1,7 +1,9 @@
+import './App.css'
+
 const App = () => {
   return (
-    <div>
-      App
+    <div className='app-container'>
+      Driving Test App
     </div>
   )
 }
