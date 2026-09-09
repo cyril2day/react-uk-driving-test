@@ -5,6 +5,7 @@ import { quizReducer } from './state/quizReducer'
 import QuestionView from './components/QuestionView'
 import ProgressBar from './components/ProgressBar'
 import AppBanner from './components/AppBanner'
+import ResultView from './components/ResultView'
 
 const initialState = {
   currentQuestion: 0,
@@ -37,9 +38,16 @@ const App = () => {
     />
   )
 
+  const score = state.answers.reduce((acc, answer, idx) => {
+    return answer === questions[idx].correctAnswer ? acc + 1 : acc
+  }, 0)
+
   const result_view = (
-    <>
-    </>
+    <ResultView
+      score={score}
+      questions={questions}
+      answers={state.answers}
+    />
   )
 
   return (
