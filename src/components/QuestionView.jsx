@@ -1,6 +1,9 @@
 import QuestionHeader from './QuestionHeader'
 import { Card } from './ui/Card'
-QuestionHeader
+import QuestionText from './QuestionText'
+import AnswerOptions from './AnswerOptions'
+import MediaDisplay from './MediaDisplay'
+import NavigationControls from './NavigationControls'
 
 const QuestionView = ({
   q,
@@ -18,6 +21,19 @@ const QuestionView = ({
         totalQuestions={totalQuestions}
         timeLeft={timeLeft}
       />
+
+      <div style={{
+          display: 'flex',
+          gap: '1rem',
+          flexDirection: 'row'
+      }}>
+        <div style={{ flex: 1 }}>
+          <QuestionText
+            text={q.question}
+          />
+        </div>
+
+      </div>
     </Card>
   )
 }
