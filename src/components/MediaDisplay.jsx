@@ -1,3 +1,5 @@
+const resolveMediaUrl = (src) => `${import.meta.env.BASE_URL}${src.replace(/^\/+/, '')}`
+
 const MediaDisplay = ({
   type,
   image,
@@ -15,7 +17,7 @@ const MediaDisplay = ({
     >
       {type === 'image' && (
         <img
-          src={image}
+          src={resolveMediaUrl(image)}
           alt='question'
           style={{
               maxWidth: '100%',
@@ -39,7 +41,7 @@ const MediaDisplay = ({
           }}
         >
           <source
-            src={video}
+            src={resolveMediaUrl(video)}
             type='video/mp4'
           />
         </video>
