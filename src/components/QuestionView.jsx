@@ -40,12 +40,18 @@ const QuestionView = ({
         </div>
         {(q.type === 'image' || q.type === 'video') && (
           <MediaDisplay
+            key={q.id}
             type={q.type}
             image={q.image}
             video={q.video}
           />
         )}
       </div>
+      <NavigationControls
+        currentQuestion={currentQuestion}
+        totalQuestions={totalQuestions}
+        dispatch={dispatch}
+      />
     </Card>
   )
 }
