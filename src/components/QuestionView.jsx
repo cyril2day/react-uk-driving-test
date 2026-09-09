@@ -38,7 +38,13 @@ const QuestionView = ({
             onSelect={onAnswer}
           />
         </div>
-
+        {(q.type === 'image' || q.type === 'video') && (
+          <MediaDisplay
+            type={q.type}
+            image={q.image}
+            video={q.video}
+          />
+        )}
       </div>
     </Card>
   )
