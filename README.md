@@ -1,16 +1,22 @@
-# React + Vite
+# UK Driving Theory Test Practice App
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A web app for practising the UK driving theory test. Features 50 multiple-choice questions covering road rules, signs, motorway driving, pedestrian crossings, weather conditions, and vehicle safety.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **50 exam-style questions** — text, image, and video-based (dashcam footage)
+- **57-minute countdown timer** — matching the real test time limit
+- **Progress tracking** — a progress bar shows how far through the test you are
+- **Instant results** — pass/fail score with a full review of every question, highlighting correct and incorrect answers with explanations
+- **Pass threshold** — 43/50, matching the official DVSA standard
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- Vite
+- Plain CSS
+- Lucide React icons
 
-## Expanding the Oxlint configuration
+## License
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+MIT
