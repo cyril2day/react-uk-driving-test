@@ -4,6 +4,7 @@ import questions from './data/questions'
 import { quizReducer } from './state/quizReducer'
 import TempComponent from './components/tempComponent'
 import QuestionView from './components/QuestionView'
+import ProgressBar from './components/ProgressBar'
 
 const initialState = {
   currentQuestion: 0,
@@ -44,6 +45,11 @@ const App = () => {
   return (
     <div className='app-container'>
       <TempComponent state={state} dispatch={dispatch} /> 
+
+      <ProgressBar
+        current={state.currentQuestion}
+        total={questions.length}
+      />
 
       <div className='quiz-content'>
         {state.submitted ? result_view : question_view }
