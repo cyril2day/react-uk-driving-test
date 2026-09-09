@@ -31,6 +31,12 @@ const QuestionView = ({
           <QuestionText
             text={q.question}
           />
+
+          <AnswerOptions
+            options={q.options} 
+            selectedIndex={selectedAnswer}
+            onSelect={onAnswer}
+          />
         </div>
 
       </div>
